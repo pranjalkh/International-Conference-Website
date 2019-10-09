@@ -1,0 +1,70 @@
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:40%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:30%;
+    top:0;
+    height:100%;
+    width:50%;
+    position:absolute;
+}
+#ResponsiveTable{
+    width:100%;
+    border-collapse: collapse;
+}
+tr:nth-of-type(odd){
+    background: white;
+}
+tr:nth-of-type(even){
+    background-color:aliceblue;
+}
+#HeadRow{
+    background: #33A1DE;
+    font-weight: bold;
+    color: white;
+}
+#ResponsiveTable td{
+    padding:10px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+@media screen and (max-width:1000px) {
+    #ResponsiveTable,
+    #ResponsiveTable tbody,
+    #ResponsiveTable tr,
+    #ResponsiveTable td{
+        display: block;
+    }
+    #HeadRow{
+        position: absolute;
+        left: -9999px;
+        top=-9999px; 
+    }
+    #ResponsiveTable td
+    {
+        border: none;
+        position: relative;
+        padding-left: 40%;
+        white-space: normal;
+        text-align: left;
+        
+    }
+     #ResponsiveTable td:before
+    {
+        position: absolute;
+        top:5px;
+        left: 5px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        content: attr(tableHeadData);
+    }
+   
+    
+}
